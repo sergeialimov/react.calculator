@@ -9,6 +9,9 @@ class App extends Component {
           <div id="display">
           </div>
           <div id="firstRow">
+            <div id="ac">AC</div>
+            <div id="divide"></div>
+            <div id="multiply"></div>
           </div>
           <div id="secondRow">
           </div>

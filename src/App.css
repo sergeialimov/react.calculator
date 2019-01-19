@@ -22,6 +22,17 @@
 
 #firstRow {
   background: darkgray;
+  display: grid;
+  grid-template-colums: 2fr 1fr 1fr;
+  grid-column-gap: 1px;
+}
+
+#ac {
+  background: #96260F;
+}
+
+#divide {
+  background: ligthgray;
 }
 
 #secondRow {
