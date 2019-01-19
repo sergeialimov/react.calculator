@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  display: grid;
+  display: flex;
   height: 100vh;
 }
 
@@ -23,7 +23,9 @@
 #firstRow {
   background: darkgray;
   display: grid;
-  grid-template-colums: 2fr 1fr 1fr;
+  /* grid-template-rows: 1fr; */
+  grid-template-colums: 30% 30% 30%;
+  /* grid-template-colums: 2fr 1fr 1fr; */
   grid-column-gap: 1px;
 }
 
@@ -37,6 +39,12 @@
 
 #secondRow {
   background: black;
+  display: grid;
+  grid-template-colums: 1fr 1fr 1fr 1fr;
+}
+
+#minus {
+  background-color: ligthgray;
 }
 
 #thirdRow {
