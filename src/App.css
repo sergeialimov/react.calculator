@@ -11,4 +11,36 @@
   width: 350px;
   height: 400px;
   background-color: gray;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 1px;
 }
+
+#display {
+  background: black;
+}
+
+#firstRow {
+  background: darkgray;
+}
+
+#secondRow {
+  background: black;
+}
+
+#thirdRow {
+  background: darkgray;
+}
+
+#fourthRow {
+  background: black;
+}
+
+#fifthRow {
+  background: darkgray;
+}
+
+#sixthRow {
+  background: black;
+}
+

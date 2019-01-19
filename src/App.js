@@ -5,8 +5,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div id='calc'>
-
+        <div id="calc">
+          <div id="display">
+          </div>
+          <div id="firstRow">
+          </div>
+          <div id="secondRow">
+          </div>
+          <div id="thirdRow">
+          </div>
+          <div id="fourthRow">
+          </div>
+          <div id="fifthRow">
+          </div>
+          <div id="sixthRow">
+          </div>
         </div>
       </div>
     );
