@@ -26,13 +26,10 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-column-gap: 1px;
-  align-items: center;
 }
 
 #ac {
   background: #96260F;
-  /* align-self: center; */
-  /* height: 100%; */
 }
 
 #divide {
@@ -44,13 +41,13 @@
 }
 
 #secondRow {
-  background: black;
+  background: darkgray;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 #minus {
-  background-color: ligthgray;
+  background: gray;
 }
 
 #thirdRow {
