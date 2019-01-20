@@ -11,7 +11,7 @@ class App extends Component {
           <div id="firstRow">
             <div id="ac">AC</div>
             <div id="divide">/</div>
-            <div id="multiply">*</div>
+            <div id="multiply">x</div>
           </div>
           <div id="secondRow">
             <div id="7">7</div>

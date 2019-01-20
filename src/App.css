@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  display: flex;
+  display: grid;
   height: 100vh;
 }
 
@@ -13,7 +13,8 @@
   background-color: gray;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-row-gap: 1px;
+  /* grid-row-gap: 1px; */
+  font-size: 22px;
 }
 
 #display {
@@ -25,20 +26,27 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-column-gap: 1px;
+  align-items: center;
 }
 
 #ac {
   background: #96260F;
+  /* align-self: center; */
+  /* height: 100%; */
 }
 
 #divide {
-  background: ligthgray;
+  background: gray;
+}
+
+#multiply {
+  background: gray;
 }
 
 #secondRow {
   background: black;
   display: grid;
-  grid-template-colums: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 #minus {
