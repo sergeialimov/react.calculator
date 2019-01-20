@@ -9,15 +9,17 @@ class App extends Component {
           <div id="display">
           </div>
           <div id="firstRow">
-            <div id="ac">AC</div>
-            <div id="divide">/</div>
-            <div id="multiply">x</div>
+            <div id="ac">
+              <p>AC</p>
+            </div>
+            <div id="divide"><p>/</p></div>
+            <div id="multiply"><p>x</p></div>
           </div>
           <div id="secondRow">
-            <div id="7">7</div>
-            <div id="8">8</div>
-            <div id="9">9</div>
-            <div id="minus">-</div>
+            <div id="7"><p>7</p></div>
+            <div id="8"><p>8</p></div>
+            <div id="9"><p>9</p></div>
+            <div id="minus"><p>–</p></div>
           </div>
           <div id="thirdRow">
           </div>
