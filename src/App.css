@@ -23,9 +23,7 @@
 #firstRow {
   background: darkgray;
   display: grid;
-  /* grid-template-rows: 1fr; */
-  grid-template-colums: 30% 30% 30%;
-  /* grid-template-colums: 2fr 1fr 1fr; */
+  grid-template-columns: 2fr 1fr 1fr;
   grid-column-gap: 1px;
 }
 
