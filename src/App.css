@@ -14,9 +14,11 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-row-gap: 1px;
   grid-column-gap: 1px;
-  font-size: 22px;
   background-color: black;
   border: 2px solid black;
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
 }
 
 #display {
@@ -29,20 +31,25 @@
   background: #96260F;
 }
 
-#equals {
-  grid-area: 5 / 4 / span 2 / span 1;
-  background: darkblue;
-}
-
-#zero {
-  grid-area: 6 / 1 / span 1 / span 2;
-}
-
 .operations {
   background: gray;
 }
 
 .numbers {
-  background-color: darkgreen;
+  background-color: #61605D;
+}
+
+#equals {
+  grid-area: 5 / 4 / span 2 / span 1;
+  background: #06415C;
+  /* align-items: center; */
+}
+
+#equalsTitle {
+  align-self: center;
+}
+
+#zero {
+  grid-area: 6 / 1 / span 1 / span 2;
 }
 
