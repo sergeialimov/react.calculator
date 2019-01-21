@@ -22,6 +22,10 @@ class App extends Component {
             <div id="minus"><p>–</p></div>
           </div>
           <div id="thirdRow">
+            <div id="4"><p>4</p></div>
+            <div id="5"><p>5</p></div>
+            <div id="6"><p>6</p></div>
+            <div id="plus"><p>+</p></div>
           </div>
           <div id="fourthRow">
           </div>
