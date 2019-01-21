@@ -16,7 +16,6 @@
   grid-column-gap: 1px;
   font-size: 22px;
   background-color: black;
-  /* background-color: lightgray; */
   border: 2px solid black;
 }
 
@@ -30,27 +29,8 @@
   background: #96260F;
 }
 
-#divide {
-  /* grid-area: 2 / 3 / span 1 / span 1; */
-  background: gray;
-}
-
-#multiply {
-  /* grid-area: 2 / 4 / span 1 / span 1; */
-  background: gray;
-}
-
-#minus {
-  background: gray;
-}
-
-#plus {
-  background: gray;
-}
-
 #equals {
   grid-area: 5 / 4 / span 2 / span 1;
-  /* align-self: stretch; */
   background: darkblue;
 }
 
@@ -58,7 +38,11 @@
   grid-area: 6 / 1 / span 1 / span 2;
 }
 
+.operations {
+  background: gray;
+}
+
 .numbers {
-  background-color: green;
+  background-color: darkgreen;
 }
 
