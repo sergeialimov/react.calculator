@@ -13,6 +13,7 @@
   background-color: gray;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   /* grid-row-gap: 1px; */
   font-size: 22px;
 }
@@ -21,15 +22,12 @@
   background: black;
 }
 
-#firstRow {
-  background: darkgray;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  /* grid-column-gap: 1px; */
-}
-
 #ac {
   background: #96260F;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 #divide {
@@ -40,35 +38,11 @@
   background: gray;
 }
 
-#secondRow {
-  background: darkgray;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
 #minus {
   background: gray;
 }
 
-#thirdRow {
-  background: darkgray;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
 #plus {
   background: gray;
-}
-
-#fourthRow {
-  background: black;
-}
-
-#fifthRow {
-  background: darkgray;
-}
-
-#sixthRow {
-  background: black;
 }
 
