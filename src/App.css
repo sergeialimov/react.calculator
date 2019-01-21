@@ -51,3 +51,7 @@
   background: darkblue;
 }
 
+#zero {
+  grid-area: 6 / 1 / span 1 / span 2;
+}
+

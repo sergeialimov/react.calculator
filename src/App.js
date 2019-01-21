@@ -25,6 +25,8 @@ class App extends Component {
           <div id="2"><p>2</p></div>
           <div id="3"><p>3</p></div>
           <div id="equals"><p>=</p></div>
+          <div id="zero"><p>0</p></div>
+          <div id="dot"><p>.</p></div>
         </div>
       </div>
     );
