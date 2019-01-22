@@ -42,11 +42,8 @@
 #equals {
   grid-area: 5 / 4 / span 2 / span 1;
   background: #06415C;
-  /* align-items: center; */
-}
-
-#equalsTitle {
-  align-self: center;
+  align-content: center;
+  line-height: 97px;
 }
 
 #zero {
