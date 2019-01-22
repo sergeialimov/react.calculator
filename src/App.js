@@ -2,6 +2,20 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      num: 0,
+    }
+    this.addNumber = this.addNumber.bind(this);
+  }
+
+  addNumber = (newNum) => (e) => {
+    this.setState({
+      num: newNum,
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,7 +27,7 @@ class App extends Component {
           </div>
           <div id="divide" className="operations"><p>/</p></div>
           <div id="multiply" className="operations"><p>x</p></div>
-          <div id="7" className="numbers"><p>7</p></div>
+          <div id="7" className="numbers" onClick={this.addNumber(7)}><p>7</p></div>
           <div id="8" className="numbers"><p>8</p></div>
           <div id="9" className="numbers"><p>9</p></div>
           <div id="minus" className="operations"><p>–</p></div>
