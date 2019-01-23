@@ -8,11 +8,18 @@ class App extends Component {
       num: '',
     }
     this.addNumber = this.addNumber.bind(this);
+    this.clear = this.clear.bind(this);
   }
 
   addNumber = (newNum) => (e) => {
     this.setState({
       num: `${this.state.num}${newNum}`,
+    });
+  }
+
+  clear() {
+    this.setState({
+      num: 0,
     });
   }
 
@@ -23,7 +30,7 @@ class App extends Component {
         <div id="calc">
           <div id="display"><p id="displayText">{defaultValue}</p>
           </div>
-          <div id="ac">
+          <div id="ac" onClick={this.clear}>
             <p>AC</p>
           </div>
           <div id="divide" className="operations"><p>/</p></div>
