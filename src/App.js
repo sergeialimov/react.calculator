@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Decimal } from 'decimal.js';
 
 class App extends Component {
   constructor(props) {
@@ -43,22 +44,24 @@ class App extends Component {
   }
 
   calc() {
-    const parsedTmp = parseFloat(this.state.tmp);
-    const parsedNum = parseFloat(this.state.num);
+    const parsedTmp = new Decimal(this.state.tmp);
+    const parsedNum = new Decimal(this.state.num);
     let result = 0;
     switch (this.state.operation) {
       case '-':
-        result = parsedTmp - parsedNum;
+        result = parsedTmp.minus(parsedNum).toString();
         break;
       case '+':
-        result = parsedTmp + parsedNum;
+        result = parsedTmp.plus(parsedNum).toString();
         break;
       case 'x':
-        result = parsedTmp * parsedNum;
+        result = parsedTmp.mul(parsedNum).toString();
         break;
       case '/':
-        result = parsedTmp / parsedNum;
+        result = parsedTmp.divideBy(parsedNum).toString();
         break;
+      default:
+      // just for lint
     }
     this.setState({
       display: result,
