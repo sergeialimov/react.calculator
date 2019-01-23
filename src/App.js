@@ -7,6 +7,7 @@ class App extends Component {
     this.state = {
       num: '',
       operation: '',
+      display: ''
     }
     this.addNumber = this.addNumber.bind(this);
     this.addOperation = this.addOperation.bind(this);
@@ -16,23 +17,26 @@ class App extends Component {
   addNumber = (newNum) => (e) => {
     this.setState({
       num: `${this.state.num}${newNum}`,
+      display: `${this.state.num}${newNum}`,
     });
   }
 
   clear() {
     this.setState({
       num: 0,
+      display: 0,
     });
   }
 
   addOperation = (newOperation) => (e) => {
     this.setState({
       operation: newOperation,
+      display: newOperation,
     });
   }
 
   render() {
-    const defaultValue = this.state.num ? this.state.num : 0;
+    const defaultValue = this.state.display ? this.state.display : 0;
     return (
       <div className="App">
         <div id="calc">
