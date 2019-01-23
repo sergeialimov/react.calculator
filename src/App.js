@@ -7,7 +7,8 @@ class App extends Component {
     this.state = {
       num: '',
       operation: '',
-      display: ''
+      display: '',
+      tmp: 0,
     }
     this.addNumber = this.addNumber.bind(this);
     this.addOperation = this.addOperation.bind(this);
@@ -32,6 +33,8 @@ class App extends Component {
     this.setState({
       operation: newOperation,
       display: newOperation,
+      tmp: this.state.num,
+      num: 0,
     });
   }
 
