@@ -5,22 +5,23 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      num: 0,
+      num: '',
     }
     this.addNumber = this.addNumber.bind(this);
   }
 
   addNumber = (newNum) => (e) => {
     this.setState({
-      num: newNum,
+      num: `${this.state.num}${newNum}`,
     });
   }
 
   render() {
+    const defaultValue = this.state.num ? this.state.num : 0;
     return (
       <div className="App">
         <div id="calc">
-          <div id="display">
+          <div id="display"><p id="displayText">{defaultValue}</p>
           </div>
           <div id="ac">
             <p>AC</p>

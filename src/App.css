@@ -24,6 +24,13 @@
 #display {
   grid-area: 1 / 1 / span 1 / span 4;
   background: black;
+  text-align: right;
+  /* padding-right: 10px; */
+}
+
+#displayText {
+  margin: 0;
+  line-height: 50px;
 }
 
 #ac {
