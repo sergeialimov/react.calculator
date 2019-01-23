@@ -8,7 +8,8 @@ class App extends Component {
       num: '',
       operation: '',
       display: '',
-      tmp: 0,
+      tmp: '',
+      res: '',
     }
     this.addNumber = this.addNumber.bind(this);
     this.addOperation = this.addOperation.bind(this);
@@ -25,8 +26,10 @@ class App extends Component {
 
   clear() {
     this.setState({
-      num: 0,
+      num: '',
       display: '',
+      tmp: '',
+      res: '',
     });
   }
 
@@ -35,17 +38,33 @@ class App extends Component {
       operation: newOperation,
       display: newOperation,
       tmp: this.state.num,
-      num: 0,
+      num: '',
     });
   }
 
   calc() {
-    const result = parseFloat(this.state.tmp) - parseFloat(this.state.num);
+    const parsedTmp = parseFloat(this.state.tmp);
+    const parsedNum = parseFloat(this.state.num);
+    let result = 0;
+    switch (this.state.operation) {
+      case '-':
+        result = parsedTmp - parsedNum;
+        break;
+      case '+':
+        result = parsedTmp + parsedNum;
+        break;
+      case 'x':
+        result = parsedTmp * parsedNum;
+        break;
+      case '/':
+        result = parsedTmp / parsedNum;
+        break;
+    }
     this.setState({
       display: result,
       operation: '',
       num: result,
-      tmp: 0,
+      tmp: '',
       res: result,
     });
   }
