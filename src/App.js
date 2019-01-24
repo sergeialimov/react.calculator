@@ -7,10 +7,10 @@ class App extends Component {
     super(props);
     this.state = {
       num: '',
+      num2: '',
       operation: '',
       display: '',
-      tmp: '',
-      res: '',
+      result: '',
     }
     this.addNumber = this.addNumber.bind(this);
     this.addOperation = this.addOperation.bind(this);
@@ -19,6 +19,11 @@ class App extends Component {
   }
 
   addNumber = (newNum) => (e) => {
+    // if (this.state.result) {
+    //   this.setState({
+    //     num2: `${this.state.num2}${newNum}`,
+    //   });
+    // }
     this.setState({
       num: `${this.state.num}${newNum}`,
       display: `${this.state.num}${newNum}`,
@@ -28,47 +33,50 @@ class App extends Component {
   clear() {
     this.setState({
       num: '',
+      num2: '',
       display: '',
-      tmp: '',
-      res: '',
+      result: '',
     });
   }
 
   addOperation = (newOperation) => (e) => {
+    if (this.state.operation) {
+      
+    }
     this.setState({
       operation: newOperation,
       display: newOperation,
-      tmp: this.state.num,
+      num2: this.state.num,
       num: '',
     });
   }
 
   calc() {
-    const parsedTmp = new Decimal(this.state.tmp);
+    const parsedTmp = new Decimal(this.state.num2);
     const parsedNum = new Decimal(this.state.num);
-    let result = 0;
+    let res = 0;
     switch (this.state.operation) {
       case '-':
-        result = parsedTmp.minus(parsedNum).toString();
+        res = parsedTmp.minus(parsedNum).toString();
         break;
       case '+':
-        result = parsedTmp.plus(parsedNum).toString();
+        res = parsedTmp.plus(parsedNum).toString();
         break;
       case 'x':
-        result = parsedTmp.mul(parsedNum).toString();
+        res = parsedTmp.mul(parsedNum).toString();
         break;
       case '/':
-        result = parsedTmp.divideBy(parsedNum).toString();
+        res = parsedTmp.divideBy(parsedNum).toString();
         break;
       default:
       // just for lint
     }
     this.setState({
-      display: result,
-      operation: '',
-      num: result,
-      tmp: '',
-      res: result,
+      display: res,
+      // operation: '',
+      num: '',
+      num2: '',
+      result: res,
     });
   }
 
