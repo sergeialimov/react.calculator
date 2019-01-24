@@ -18,6 +18,7 @@ class App extends Component {
     this.operate = this.operate.bind(this);
     this.equals = this.equals.bind(this);
     this.addDecimal = this.addDecimal.bind(this);
+    this.addZero = this.addZero.bind(this);
   }
 
   // autotests for FreeCodeCamp
@@ -44,6 +45,12 @@ class App extends Component {
       } else {
         this.addNumber('.')();
       }
+    }
+  }
+
+  addZero() {
+    if (this.state.display.includes('.') | this.state.display[0]!== '0') {
+      this.addNumber('0')();
     }
   }
 
@@ -131,7 +138,7 @@ class App extends Component {
           <div id="two" className="numbers" onClick={this.addNumber(2)}>2</div>
           <div id="three" className="numbers" onClick={this.addNumber(3)}>3</div>
           <div id="equals" className="operations" onClick={this.equals}>=</div>
-          <div id="zero" className="numbers" onClick={this.addNumber(0)}>0</div>
+          <div id="zero" className="numbers" onClick={this.addZero}>0</div>
           <div id="decimal" className="numbers" onClick={this.addDecimal}>.</div>
         </div>
       </div>
