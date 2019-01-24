@@ -77,11 +77,8 @@ class App extends Component {
     return (
       <div className="App">
         <div id="calc">
-          <div id="display"><p id="displayText">{defaultValue}</p>
-          </div>
-          <div id="ac" onClick={this.clear}>
-            <p>AC</p>
-          </div>
+          <div id="display"><p id="displayText">{defaultValue}</p></div>
+          <div id="ac" onClick={this.clear}><p>AC</p></div>
           <div id="divide" className="operations" onClick={this.addOperation('/')}><p>/</p></div>
           <div id="multiply" className="operations" onClick={this.addOperation('x')}><p>x</p></div>
           <div id="7" className="numbers" onClick={this.addNumber(7)}><p>7</p></div>
