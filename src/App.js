@@ -18,6 +18,15 @@ class App extends Component {
     this.calc = this.calc.bind(this);
   }
 
+  clear() {
+    this.setState({
+      num: '',
+      num2: '',
+      display: '',
+      result: '',
+    });
+  }
+
   addNumber = (newNum) => (e) => {
     // if (this.state.result) {
     //   this.setState({
@@ -27,15 +36,6 @@ class App extends Component {
     this.setState({
       num: `${this.state.num}${newNum}`,
       display: `${this.state.num}${newNum}`,
-    });
-  }
-
-  clear() {
-    this.setState({
-      num: '',
-      num2: '',
-      display: '',
-      result: '',
     });
   }
 
@@ -68,8 +68,7 @@ class App extends Component {
       case '/':
         res = parsedTmp.divideBy(parsedNum).toString();
         break;
-      default:
-      // just for lint
+      default: // just for lint
     }
     this.setState({
       display: res,
