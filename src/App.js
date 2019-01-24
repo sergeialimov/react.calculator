@@ -116,22 +116,22 @@ class App extends Component {
       <div className="App">
         <div id="calc">
           <div id="display">{defaultValue}</div>
-          <div id="clear" onClick={this.clear}><p>AC</p></div>
-          <div id="divide" className="operations" onClick={this.addOperation('/')}><p>/</p></div>
-          <div id="multiply" className="operations" onClick={this.addOperation('x')}><p>x</p></div>
-          <div id="seven" className="numbers" onClick={this.addNumber(7)}><p>7</p></div>
-          <div id="eight" className="numbers" onClick={this.addNumber(8)}><p>8</p></div>
-          <div id="nine" className="numbers" onClick={this.addNumber(9)}><p>9</p></div>
-          <div id="subtract" className="operations" onClick={this.addOperation('-')}><p>–</p></div>
-          <div id="four" className="numbers" onClick={this.addNumber(4)}><p>4</p></div>
-          <div id="five" className="numbers" onClick={this.addNumber(5)}><p>5</p></div>
-          <div id="six" className="numbers" onClick={this.addNumber(6)}><p>6</p></div>
-          <div id="add" className="operations" onClick={this.addOperation('+')}><p>+</p></div>
-          <div id="one" className="numbers" onClick={this.addNumber(1)}><p>1</p></div>
-          <div id="two" className="numbers" onClick={this.addNumber(2)}><p>2</p></div>
-          <div id="three" className="numbers" onClick={this.addNumber(3)}><p>3</p></div>
+          <div id="clear" onClick={this.clear}>AC</div>
+          <div id="divide" className="operations" onClick={this.addOperation('/')}>/</div>
+          <div id="multiply" className="operations" onClick={this.addOperation('x')}>x</div>
+          <div id="seven" className="numbers" onClick={this.addNumber(7)}>7</div>
+          <div id="eight" className="numbers" onClick={this.addNumber(8)}>8</div>
+          <div id="nine" className="numbers" onClick={this.addNumber(9)}>9</div>
+          <div id="subtract" className="operations" onClick={this.addOperation('-')}>–</div>
+          <div id="four" className="numbers" onClick={this.addNumber(4)}>4</div>
+          <div id="five" className="numbers" onClick={this.addNumber(5)}>5</div>
+          <div id="six" className="numbers" onClick={this.addNumber(6)}>6</div>
+          <div id="add" className="operations" onClick={this.addOperation('+')}>+</div>
+          <div id="one" className="numbers" onClick={this.addNumber(1)}>1</div>
+          <div id="two" className="numbers" onClick={this.addNumber(2)}>2</div>
+          <div id="three" className="numbers" onClick={this.addNumber(3)}>3</div>
           <div id="equals" className="operations" onClick={this.equals}>=</div>
-          <div id="zero" className="numbers" onClick={this.addNumber(0)}><p>0</p></div>
+          <div id="zero" className="numbers" onClick={this.addNumber(0)}>0</div>
           <div id="decimal" className="numbers" onClick={this.addDecimal}>.</div>
         </div>
       </div>
