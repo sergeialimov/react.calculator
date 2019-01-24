@@ -6,10 +6,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      display: '',
       num: '',
       num2: '',
       operation: '',
-      display: '',
       result: '',
     }
     this.addNumber = this.addNumber.bind(this);
@@ -20,9 +20,9 @@ class App extends Component {
 
   clear() {
     this.setState({
+      display: '',
       num: '',
       num2: '',
-      display: '',
       result: '',
     });
   }
@@ -44,10 +44,10 @@ class App extends Component {
       
     }
     this.setState({
-      operation: newOperation,
       display: newOperation,
-      num2: this.state.num,
+      operation: newOperation,
       num: '',
+      num2: this.state.num,
     });
   }
 
@@ -72,10 +72,10 @@ class App extends Component {
     }
     this.setState({
       display: res,
-      // operation: '',
-      num: '',
+      num: res,
       num2: '',
-      result: res,
+      // operation: '',
+      // result: res,
     });
   }
 
