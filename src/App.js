@@ -51,8 +51,6 @@ class App extends Component {
       this.setState({
         display: newOperation,
         operation: newOperation,
-        // num: '',
-        // num2: this.state.num,
       });
     }
   }
@@ -63,7 +61,6 @@ class App extends Component {
       display: result,
       num: result,
       num2: '',
-      // operation: '',
     });
   }
 
