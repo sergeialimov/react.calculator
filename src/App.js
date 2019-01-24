@@ -10,7 +10,6 @@ class App extends Component {
       num: '',
       num2: '',
       operation: '',
-      result: '',
     }
     this.addNumber = this.addNumber.bind(this);
     this.addOperation = this.addOperation.bind(this);
@@ -23,12 +22,11 @@ class App extends Component {
       display: '',
       num: '',
       num2: '',
-      result: '',
     });
   }
 
   addNumber = (newNum) => (e) => {
-    // if (this.state.result) {
+    // if (this.state.) {
     //   this.setState({
     //     num2: `${this.state.num2}${newNum}`,
     //   });
@@ -75,7 +73,6 @@ class App extends Component {
       num: res,
       num2: '',
       // operation: '',
-      // result: res,
     });
   }
 
