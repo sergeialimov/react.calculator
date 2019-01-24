@@ -16,6 +16,7 @@ class App extends Component {
     this.clear = this.clear.bind(this);
     this.calc = this.calc.bind(this);
     this.operate = this.operate.bind(this);
+    this.equals = this.equals.bind(this);
   }
 
   clear() {
@@ -53,6 +54,13 @@ class App extends Component {
         operation: newOperation,
       });
     }
+  }
+
+  equals() {
+    this.calc();
+    this.setState({
+      operation: '',
+    });
   }
 
   calc() {
@@ -106,7 +114,7 @@ class App extends Component {
           <div id="1" className="numbers" onClick={this.addNumber(1)}><p>1</p></div>
           <div id="2" className="numbers" onClick={this.addNumber(2)}><p>2</p></div>
           <div id="3" className="numbers" onClick={this.addNumber(3)}><p>3</p></div>
-          <div id="equals" className="operations" onClick={this.calc}><p>=</p></div>
+          <div id="equals" className="operations" onClick={this.equals}><p>=</p></div>
           <div id="zero" className="numbers" onClick={this.addNumber(0)}><p>0</p></div>
           <div id="dot" className="numbers" onClick={this.addNumber('.')}><p>.</p></div>
         </div>
