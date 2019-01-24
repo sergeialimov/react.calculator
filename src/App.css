@@ -50,11 +50,15 @@
 #equals {
   grid-area: 5 / 4 / span 2 / span 1;
   background: #06415C;
-  align-content: center;
-  line-height: 97px;
+  line-height: 130px;
 }
 
 #zero {
   grid-area: 6 / 1 / span 1 / span 2;
+}
+
+#decimal {
+  line-height: 60px;
+  vertical-align: bottom;
 }
 
