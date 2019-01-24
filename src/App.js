@@ -27,27 +27,33 @@ class App extends Component {
   }
 
   addNumber = (newNum) => (e) => {
-    // if (this.state.) {
-    //   this.setState({
-    //     num2: `${this.state.num2}${newNum}`,
-    //   });
-    // }
-    this.setState({
-      num: `${this.state.num}${newNum}`,
-      display: `${this.state.num}${newNum}`,
-    });
+    if (this.state.operation) {
+      this.setState({
+        num2: `${this.state.num2}${newNum}`,
+        display: `${this.state.num2}${newNum}`,
+      });
+    } else {
+      this.setState({
+        num: `${this.state.num}${newNum}`,
+        display: `${this.state.num}${newNum}`,
+      });
+    }
   }
 
   addOperation = (newOperation) => (e) => {
     if (this.state.operation) {
-      
+      this.calc();
+      this.setState({
+        operation: newOperation,
+      });
+    } else {
+      this.setState({
+        display: newOperation,
+        operation: newOperation,
+        // num: '',
+        // num2: this.state.num,
+      });
     }
-    this.setState({
-      display: newOperation,
-      operation: newOperation,
-      num: '',
-      num2: this.state.num,
-    });
   }
 
   calc() {
