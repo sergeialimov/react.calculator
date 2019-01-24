@@ -15,6 +15,7 @@ class App extends Component {
     this.addOperation = this.addOperation.bind(this);
     this.clear = this.clear.bind(this);
     this.calc = this.calc.bind(this);
+    this.operate = this.operate.bind(this);
   }
 
   clear() {
@@ -50,6 +51,16 @@ class App extends Component {
   }
 
   calc() {
+    const result = this.operate();
+    this.setState({
+      display: result,
+      num: result,
+      num2: '',
+      // operation: '',
+    });
+  }
+
+  operate() {
     const parsedTmp = new Decimal(this.state.num2);
     const parsedNum = new Decimal(this.state.num);
     let result = 0;
@@ -68,12 +79,7 @@ class App extends Component {
         break;
       default: // just for lint
     }
-    this.setState({
-      display: result,
-      num: result,
-      num2: '',
-      // operation: '',
-    });
+    return result;
   }
 
   render() {
