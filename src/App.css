@@ -34,7 +34,7 @@
   line-height: 70px;
 }
 
-#ac {
+#clear {
   grid-area: 2 / 1 / span 1 / span 2;
   background: #96260F;
 }
