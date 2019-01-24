@@ -52,25 +52,25 @@ class App extends Component {
   calc() {
     const parsedTmp = new Decimal(this.state.num2);
     const parsedNum = new Decimal(this.state.num);
-    let res = 0;
+    let result = 0;
     switch (this.state.operation) {
       case '-':
-        res = parsedTmp.minus(parsedNum).toString();
+        result = parsedTmp.minus(parsedNum).toString();
         break;
       case '+':
-        res = parsedTmp.plus(parsedNum).toString();
+        result = parsedTmp.plus(parsedNum).toString();
         break;
       case 'x':
-        res = parsedTmp.mul(parsedNum).toString();
+        result = parsedTmp.mul(parsedNum).toString();
         break;
       case '/':
-        res = parsedTmp.divideBy(parsedNum).toString();
+        result = parsedTmp.divideBy(parsedNum).toString();
         break;
       default: // just for lint
     }
     this.setState({
-      display: res,
-      num: res,
+      display: result,
+      num: result,
       num2: '',
       // operation: '',
     });
