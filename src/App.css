@@ -26,12 +26,8 @@
   background: black;
   text-align: right;
   padding-right: 5px;
-}
-
-#displayText {
-  margin: 0;
-  font-size: 22px;
   line-height: 70px;
+  font-size: 22px;
 }
 
 #clear {
