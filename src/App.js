@@ -19,6 +19,14 @@ class App extends Component {
     this.equals = this.equals.bind(this);
   }
 
+  // autotests for FreeCodeCamp
+  componentDidMount() {
+    const script = document.createElement("script");
+    script.src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }
+
   clear() {
     this.setState({
       display: '',
