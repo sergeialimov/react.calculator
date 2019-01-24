@@ -73,16 +73,16 @@ class App extends Component {
     let result = 0;
     switch (this.state.operation) {
       case '-':
-        result = parsedNum2.minus(parsedNum).toString();
+        result = parsedNum.minus(parsedNum2).toString();
         break;
       case '+':
-        result = parsedNum2.plus(parsedNum).toString();
+        result = parsedNum.plus(parsedNum2).toString();
         break;
       case 'x':
-        result = parsedNum2.mul(parsedNum).toString();
+        result = parsedNum.mul(parsedNum2).toString();
         break;
       case '/':
-        result = parsedNum2.divideBy(parsedNum).toString();
+        result = parsedNum.dividedBy(parsedNum2).toString();
         break;
       default: // just for lint
     }
