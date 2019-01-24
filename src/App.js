@@ -60,7 +60,9 @@ class App extends Component {
   }
 
   equals() {
-    this.calc();
+    if (this.state.num2) {
+      this.calc();
+    }
     this.setState({
       operation: '',
     });
