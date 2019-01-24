@@ -23,6 +23,7 @@ class App extends Component {
       display: '',
       num: '',
       num2: '',
+      operation: '',
     });
   }
 
