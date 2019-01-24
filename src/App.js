@@ -17,6 +17,7 @@ class App extends Component {
     this.calc = this.calc.bind(this);
     this.operate = this.operate.bind(this);
     this.equals = this.equals.bind(this);
+    this.addDecimal = this.addDecimal.bind(this);
   }
 
   // autotests for FreeCodeCamp
@@ -34,6 +35,16 @@ class App extends Component {
       num2: '',
       operation: '',
     });
+  }
+
+  addDecimal() {
+    if (!this.state.display.includes('.')) {
+      if (this.state.display.length === 0) {
+        this.addNumber('0.')();
+      } else {
+        this.addNumber('.')();
+      }
+    }
   }
 
   addNumber = (newNum) => (e) => {
@@ -100,7 +111,7 @@ class App extends Component {
   }
 
   render() {
-    const defaultValue = this.state.display ? this.state.display : '';
+    const defaultValue = this.state.display ? this.state.display : '0';
     return (
       <div className="App">
         <div id="calc">
@@ -121,7 +132,7 @@ class App extends Component {
           <div id="three" className="numbers" onClick={this.addNumber(3)}><p>3</p></div>
           <div id="equals" className="operations" onClick={this.equals}>=</div>
           <div id="zero" className="numbers" onClick={this.addNumber(0)}><p>0</p></div>
-          <div id="decimal" className="numbers" onClick={this.addNumber('.')}>.</div>
+          <div id="decimal" className="numbers" onClick={this.addDecimal}>.</div>
         </div>
       </div>
     );
