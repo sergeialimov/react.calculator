@@ -119,9 +119,9 @@ class App extends Component {
           <div id="one" className="numbers" onClick={this.addNumber(1)}><p>1</p></div>
           <div id="two" className="numbers" onClick={this.addNumber(2)}><p>2</p></div>
           <div id="three" className="numbers" onClick={this.addNumber(3)}><p>3</p></div>
-          <div id="equals" className="operations" onClick={this.equals}><p>=</p></div>
+          <div id="equals" className="operations" onClick={this.equals}>=</div>
           <div id="zero" className="numbers" onClick={this.addNumber(0)}><p>0</p></div>
-          <div id="decimal" className="numbers" onClick={this.addNumber('.')}><p>.</p></div>
+          <div id="decimal" className="numbers" onClick={this.addNumber('.')}>.</div>
         </div>
       </div>
     );
