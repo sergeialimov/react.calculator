@@ -51,17 +51,12 @@ class App extends Component {
   }
 
   addOperation = (newOperation) => (e) => {
-    if (this.state.operation) {
+    if (this.state.operation && this.state.num2) {
       this.calc();
-      this.setState({
-        operation: newOperation,
-      });
-    } else {
-      this.setState({
-        display: newOperation,
-        operation: newOperation,
-      });
     }
+    this.setState({
+      operation: newOperation,
+    });
   }
 
   equals() {
